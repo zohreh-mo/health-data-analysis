@@ -11,10 +11,10 @@ End-to-end data analysis and machine learning project on diabetes health indicat
 - Prepare a foundation for advanced health data projects
 
 ## Dataset
-- **Source:** CDC Diabetes Health Indicators (Hugging Face)
-- **Rows:** 38,052
-- **Columns:** 23
-- **Key variables:** Age, BMI, HighBP, HighChol, Smoker, Stroke, HeartDiseaseorAttack, PhysActivity, Diabetes_012, target
+- Source: CDC Diabetes Health Indicators (Hugging Face)
+- Rows: 38,052
+- Columns: 23
+- Key variables: Age, BMI, HighBP, HighChol, Smoker, Stroke, HeartDiseaseorAttack, PhysActivity, Diabetes_012, target
 
 ## Tools & Libraries
 - Python 3.13
@@ -26,22 +26,21 @@ End-to-end data analysis and machine learning project on diabetes health indicat
 - pyarrow
 
 ## Project Structure
-
-- `EXPLORE.PY` — Exploratory Data Analysis
-- `MODEL.PY` — Logistic Regression model
-- `MODELS_COMPARISON.PY` — Comparison of 3 ML models
-- `test.parquet` — Test dataset
-- `train.parquet` — Training dataset
-- `age_distribution.png`
-- `diabetes_distribution.png`
-- `bmi_diabetes.png`
-- `correlation_matrix.png`
-- `confusion_matrix.png`
-- `roc_curve.png`
-- `feature_importance.png`
-- `model_comparison.png`
-- `model_comparison.csv`
-- `README.md`
+- EXPLORE.PY — Exploratory Data Analysis
+- MODEL.PY — Logistic Regression model
+- MODELS_COMPARISON.PY — Comparison of 3 ML models
+- test.parquet — Test dataset
+- train.parquet — Training dataset
+- age_distribution.png
+- diabetes_distribution.png
+- bmi_diabetes.png
+- correlation_matrix.png
+- confusion_matrix.png
+- roc_curve.png
+- feature_importance.png
+- model_comparison.png
+- model_comparison.csv
+- README.md
 
 ## Exploratory Data Analysis
 
@@ -60,9 +59,9 @@ End-to-end data analysis and machine learning project on diabetes health indicat
 ## Machine Learning Models
 
 ### Model 1: Logistic Regression
-- **Train/Test Split:** 80% / 20%
-- **Feature Scaling:** StandardScaler
-- **Evaluation:** Accuracy, Precision, Recall, F1-Score, ROC-AUC
+- Train/Test Split: 80% / 20%
+- Feature Scaling: StandardScaler
+- Evaluation: Accuracy, Precision, Recall, F1-Score, ROC-AUC
 
 ### Confusion Matrix
 ![confusion](confusion_matrix.png)
@@ -81,7 +80,7 @@ End-to-end data analysis and machine learning project on diabetes health indicat
 | Random Forest | 0.6307 | 0.5437 | 0.6766 |
 | Gradient Boosting | 0.6491 | 0.5722 | 0.7036 |
 
-**Best Model:** Gradient Boosting (Accuracy: 0.6491)
+Best Model: Gradient Boosting (Accuracy: 0.6491)
 
 ### Model Comparison Visualization
 ![comparison](model_comparison.png)
@@ -89,7 +88,15 @@ End-to-end data analysis and machine learning project on diabetes health indicat
 ## How to Run
 
 1. Install Python 3.13
+2. Install required libraries: pip install pandas numpy matplotlib seaborn scikit-learn pyarrow
+3. Run the scripts:
+   - python EXPLORE.PY (EDA)
+   - python MODEL.PY (Logistic Regression)
+   - python MODELS_COMPARISON.PY (Model Comparison)
 
-2. Install required libraries:
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn pyarrow
+## Author
+**Zohreh Hokmabadi**
+- GitHub: [@zohreh-mo](https://github.com/zohreh-mo)
+
+## Status
+In progress — Next steps: SQL analysis, Power BI dashboard, and research paper.
