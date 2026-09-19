@@ -1,13 +1,12 @@
-
 # Health Data Analysis — CDC Diabetes Health Indicators
 
 ## Project Description
-End-to-end data analysis and machine learning project on diabetes health indicators using the CDC Behavioral Risk Factor Surveillance System (BRFSS) dataset. This project covers exploratory data analysis (EDA), visualization, and predictive modeling with Logistic Regression.
+End-to-end data analysis and machine learning project on diabetes health indicators using the CDC Behavioral Risk Factor Surveillance System (BRFSS) dataset. This project covers exploratory data analysis (EDA), visualization, and predictive modeling with multiple machine learning algorithms.
 
 ## Objectives
 - Work with real-world health data
 - Perform exploratory data analysis (EDA) with Python
-- Build a machine learning model for diabetes prediction
+- Build and compare multiple machine learning models
 - Create analytical visualizations
 - Prepare a foundation for advanced health data projects
 
@@ -29,7 +28,8 @@ End-to-end data analysis and machine learning project on diabetes health indicat
 ## Project Structure
 
 - `EXPLORE.PY` — Exploratory Data Analysis
-- `MODEL.PY` — Machine Learning Model
+- `MODEL.PY` — Logistic Regression model
+- `MODELS_COMPARISON.PY` — Comparison of 3 ML models
 - `test.parquet` — Test dataset
 - `train.parquet` — Training dataset
 - `age_distribution.png`
@@ -39,6 +39,8 @@ End-to-end data analysis and machine learning project on diabetes health indicat
 - `confusion_matrix.png`
 - `roc_curve.png`
 - `feature_importance.png`
+- `model_comparison.png`
+- `model_comparison.csv`
 - `README.md`
 
 ## Exploratory Data Analysis
@@ -55,12 +57,12 @@ End-to-end data analysis and machine learning project on diabetes health indicat
 ### Correlation Matrix
 ![corr](correlation_matrix.png)
 
-## Machine Learning Model
+## Machine Learning Models
 
-### Model: Logistic Regression
+### Model 1: Logistic Regression
 - **Train/Test Split:** 80% / 20%
 - **Feature Scaling:** StandardScaler
-- **Evaluation Metrics:** Accuracy, Precision, Recall, F1-Score, ROC-AUC
+- **Evaluation:** Accuracy, Precision, Recall, F1-Score, ROC-AUC
 
 ### Confusion Matrix
 ![confusion](confusion_matrix.png)
@@ -70,6 +72,19 @@ End-to-end data analysis and machine learning project on diabetes health indicat
 
 ### Feature Importance
 ![feature](feature_importance.png)
+
+### Model Comparison
+
+| Model | Accuracy | F1-Score | ROC-AUC |
+|-------|----------|----------|---------|
+| Logistic Regression | 0.6182 | 0.5101 | 0.6505 |
+| Random Forest | 0.6307 | 0.5437 | 0.6766 |
+| Gradient Boosting | 0.6491 | 0.5722 | 0.7036 |
+
+**Best Model:** Gradient Boosting (Accuracy: 0.6491)
+
+### Model Comparison Visualization
+![comparison](model_comparison.png)
 
 ## How to Run
 
